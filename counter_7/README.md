@@ -31,3 +31,38 @@ Const dan final sama-sama merupakan modifier untuk nilai variabel yang tetap dan
 - Membuat function _decrementCounter untuk mengurangi nilai counter
 - Handle jika nilai counter sudah 0 tidak akan bisa dikurangi lagi
 -  Menambahkan logika text genap warna merah jika counter bernilai genap, dan text ganjil warna biru jika counter bernilai ganjil
+
+# Tugas 8: Flutter Form
+
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+Ketika melakukan Navigator.push, page baru akan dipush ke stack dan menimpa page lama, sehingga route ke page lama tetap ada dan kita bisa kembali ke page lama. Sedangkan pada Navigator.pushReplacement, page lama seolah-olah di-pop terlebih dahulu, lalu page baru akan di-push. Maka, route ke page lama akan dihapus dan digantikan oleh page baru.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- ListTile : wadah untuk menampung widget lain
+- TextButton : membuat tombol
+- Form : untuk menerima input dari pengguna
+- Text : menampilkan tulisan
+- Navigator : untuk pindah ke page lain
+- DropdownButton : untuk menampilkan pilihan input berbentuk dropdown
+- TextFormField : menerima input teks pada form
+- Drawer : menampilkan drawer yang berisi pilihan untuk pindah halaman
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- onPressed 
+- onEditingComplete
+- onChange 
+- onSaved 
+- onTap
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+- Navigator pada Flutter berbentuk stack, yang berarti memakai metode push() dan pop() untuk menambahkan atau menghapus. Ketika melakukan Navigator.push atau Navigator.pushReplacement, screen atau page sebelumnya akan tertimpa dengan page yang baru dan tampilan halaman Flutter akan terganti ke page baru tersebut.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+### Menambahkan drawer/hamburger menu pada app yang telah dibuat sebeumnya.
+- Membuat file drawer.dart yang berisikan builder untuk membuat widget drawer.
+### Menambahkan tiga tombol navigasi pada drawer/hamburger.
+- Membuat widget ListTile pada drawer untuk menampilkan pilihan menu navigasi halaman.
+### Menambahkan halaman form
+- Membuat file form.dart yang berisikan widget Form untuk menerima input data dari pengguna. Pada tugas ini widget input yang digunakan berupa TextFormField dan DropdownButton.
+### Menambahkan halaman data budget
+- Membuat file data.dart untuk menampilkan data yang telah diinput pengguna. Input pada form akan dimasukkan ke dalam List kemudian ditampilkan dengan widget Card.
