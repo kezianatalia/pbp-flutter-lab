@@ -32,6 +32,7 @@ Const dan final sama-sama merupakan modifier untuk nilai variabel yang tetap dan
 - Handle jika nilai counter sudah 0 tidak akan bisa dikurangi lagi
 -  Menambahkan logika text genap warna merah jika counter bernilai genap, dan text ganjil warna biru jika counter bernilai ganjil
 
+
 # Tugas 8: Flutter Form
 
 ## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
@@ -66,3 +67,28 @@ Ketika melakukan Navigator.push, page baru akan dipush ke stack dan menimpa page
 - Membuat file form.dart yang berisikan widget Form untuk menerima input data dari pengguna. Pada tugas ini widget input yang digunakan berupa TextFormField dan DropdownButton.
 ### Menambahkan halaman data budget
 - Membuat file data.dart untuk menampilkan data yang telah diinput pengguna. Input pada form akan dimasukkan ke dalam List kemudian ditampilkan dengan widget Card.
+
+
+# Tugas 9: Integrasi Web Service pada Flutter
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+- Fungsi models adalah untuk membantu developer mengakses dan melihat data. Pengambilan data JSON tanpa model bisa dilakukan, namun akan mempersulit kita untuk mengaksesnya karena data masih berbentuk raw data.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Scaffold : struktur layout
+- Drawer : menampilkan drawer untuk memilih halaman
+- Padding : mengatur jarak antar widget dan container
+- 
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Membuat model untuk digunakan pada data
+- Membuat sebuah fungsi yang mengirim HTTP Request GET untuk mengambil (fetch) data 
+- Konversi HTTP Response menjadi dart object
+- Menampilkan data dengan FutureBuilder
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambahkan drawer ke page my watch list
+2. Membuat page untuk menampilkan data mywatchlist
+3. Menambahkan dependency http
+4. Membuat model untuk data watchlist
+5. Membuat file untuk melakukan fetching data JSON
+6. Menampilkan data yang di-fetch ke page 
